@@ -179,6 +179,7 @@ flags.DEFINE_integer(
 
 
 def main(_):
+
     tf.logging.set_verbosity(tf.logging.INFO)
 
     processors = {
@@ -592,7 +593,7 @@ def main(_):
 if __name__ == "__main__":
     flags.mark_flag_as_required("data_dir")
     flags.mark_flag_as_required("task_name")
-    flags.mark_flag_as_required("spm_model_file")
+    # flags.mark_flag_as_required("spm_model_file")
     flags.mark_flag_as_required("output_dir")
     tf.app.run()
 
