@@ -14,7 +14,7 @@ python -m run_classifier \
 --train_step=10000 \
 --save_checkpoints_steps=100 \
 --train_batch_size=128 \
---spm_model_file=false
+--spm_model_file=data_dir/albert_base/vocab_chinese.txt
 #   --do_eval=true \
 #   --do_predict \
 #   --spm_model_file=... \
