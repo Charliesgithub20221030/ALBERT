@@ -327,9 +327,10 @@ class IntentProcessor(DataProcessor):
         """See base class."""
         df = pd.read_csv(
             os.path.join(data_dir, "Intents", "train.tsv"),
-            columns=["intent", "sentence"],
-            sep='\t'
+            header=None,
+            sep="\t",
         )
+        df.columns = ["intent", "sentence"]
         return sorted(np.unique(df["intent"].values).tolist())
 
     def _create_examples(self, lines, set_type):
