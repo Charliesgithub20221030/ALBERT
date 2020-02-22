@@ -325,9 +325,10 @@ class IntentProcessor(DataProcessor):
 
     def get_labels(self, data_dir):
         """See base class."""
-        df = pd.DataFrame(
+        df = pd.read_csv(
             os.path.join(data_dir, "Intents", "train.tsv"),
             columns=["intent", "sentence"],
+            sep='\t'
         )
         return sorted(np.unique(df["intent"].values).tolist())
 
