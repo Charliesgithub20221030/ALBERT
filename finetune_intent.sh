@@ -9,10 +9,10 @@ python -m run_classifier \
 --max_seq_length=128 \
 --optimizer=adamw \
 --task_name=intent \
---warmup_step=1000 \
+--warmup_step=100 \
 --learning_rate=3e-5 \
---train_step=10000 \
---save_checkpoints_steps=100 \
+--train_step=500 \
+--save_checkpoints_steps=50 \
 --train_batch_size=128 \
 --vocab_file=data_dir/albert_base/vocab_chinese.txt
 #   --do_eval=true \
