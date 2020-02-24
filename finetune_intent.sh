@@ -11,8 +11,8 @@ python -m run_classifier \
 --task_name=intent \
 --warmup_step=100 \
 --learning_rate=3e-5 \
---train_step=300 \
---save_checkpoints_steps=100 \
+--train_step=250 \
+--save_checkpoints_steps=50 \
 --train_batch_size=128 \
 --vocab_file=data_dir/albert_base/vocab_chinese.txt
 #   --do_eval=true \
